@@ -1,34 +1,52 @@
-﻿namespace OperatorExercise
+﻿namespace SelectionStatementExercise
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            //For division, create two integer variables called a and b.
+            var r = new Random();
+            var favNumber = r.Next(0, 1001);
 
-            var a = 17;
-            var b = 4;
-            var quotient = a / b;
-            var remainder = a % b;
+            Console.WriteLine("Pick a Number from 1 - 1000");
+            var userInput = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine(a + "/" + b + " is " + quotient + " remainder " + remainder);
-            Console.WriteLine($"{a} / {b} is {quotient} remainder {remainder}");
+            if (userInput < favNumber)
+            {
+                Console.WriteLine($"{userInput} is too low");
+            }
+            else if (userInput > favNumber)
+            {
+                Console.WriteLine($"{userInput} is too high");
+            }
+            else
+            {
+                Console.WriteLine("Congratulations BooZa!");
+            }
+            Console.WriteLine("what is your favorite subject?");
 
-            Console.WriteLine("Please enter the radius of your circle:");
-            var userInput = Console.ReadLine();
+            string subject = Console.ReadLine();
 
-            var radius = double.Parse(userInput);
-            Console.WriteLine(AreaOfCircle(radius));
-
-          
-        }
-        public static double AreaOfCircle(double radius)
-        {
-            //this os the scope of method
-            var area = Math.PI * Math.Pow(radius, 2);
-
-            return area;
-
+            switch (subject.ToLower())
+            {
+                case "math":
+                    Console.WriteLine("I hate Math");
+                    break;
+                case "Aljebra":
+                    Console.WriteLine("I love Aljebra");
+                    break;
+                case "English":
+                    Console.WriteLine("I love Learing English");
+                    break;
+                case "History":
+                    Console.WriteLine("It's Always been hard to learn History");
+                    break;
+                case "Science":
+                    Console.WriteLine("Nver mind that");
+                    break;
+                default:
+                    Console.WriteLine("i don't know that subject!");
+                    break;
+            }
         }
     }
 }
