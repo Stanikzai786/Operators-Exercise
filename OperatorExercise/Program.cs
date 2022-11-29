@@ -31,16 +31,16 @@
                 case "math":
                     Console.WriteLine("I hate Math");
                     break;
-                case "Aljebra":
+                case "aljebra":
                     Console.WriteLine("I love Aljebra");
                     break;
-                case "English":
+                case "english":
                     Console.WriteLine("I love Learing English");
                     break;
-                case "History":
+                case "history":
                     Console.WriteLine("It's Always been hard to learn History");
                     break;
-                case "Science":
+                case "science":
                     Console.WriteLine("Nver mind that");
                     break;
                 default:
